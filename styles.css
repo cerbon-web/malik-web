@@ -1,0 +1,38 @@
+/* Simple, kid-friendly styles */
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#555;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:var(--bg);
+  color:#111;
+  line-height:1.5;
+}
+.site-header{
+  background:linear-gradient(180deg, var(--accent), #2c5282);
+  color:white;
+  padding:28px 16px;
+  text-align:center;
+}
+.lang-switch{position:absolute;right:12px;top:12px}
+.lang-btn{background:rgba(255,255,255,0.12);border:0;color:white;padding:6px 10px;margin-left:6px;border-radius:6px;cursor:pointer}
+.lang-btn:focus{outline:2px solid rgba(255,255,255,0.25)}
+.container{max-width:820px;margin:24px auto;padding:0 12px}
+.card{background:var(--card);padding:18px;border-radius:10px;margin-bottom:14px;box-shadow:0 6px 18px rgba(10,10,20,0.06)}
+h1{margin:6px 0 4px 0;font-size:28px}
+h2{margin:0 0 8px 0}
+.subtitle{opacity:0.95}
+.site-footer{max-width:820px;margin:24px auto;padding:12px 16px;color:var(--muted);text-align:center}
+/* RTL support */
+body[dir="rtl"]{direction:rtl;text-align:right}
+body[dir="ltr"]{direction:ltr;text-align:left}
+@media (max-width:520px){
+  .lang-switch{position:static;margin-bottom:12px;text-align:center}
+  .lang-btn{margin:6px 6px 0 0}
+}
